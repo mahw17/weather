@@ -6,39 +6,23 @@ use Anax\DI\DIFactoryConfig;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Test the User class.
+ * Test for modelclass Weather.
  */
 class WeatherTest extends TestCase
 {
-    // Create the di container.
-    protected $di;
-    protected $weatherObj;
-
 
     /**
-     * Prepare before each test.
+     * Setup before each testcase
      */
-    protected function setUp()
+    public function setUp()
     {
-        global $di;
-
-        // Setup di
         $this->di = new DIFactoryConfig();
         $this->di->loadServices(ANAX_INSTALL_PATH . "/config/di");
-
-        // View helpers uses the global $di so it needs its value
-        $di = $this->di;
+        $this->di->loadServices(ANAX_INSTALL_PATH . "/test/config/di");
 
         $this->weatherObj = $this->di->get("weather");
-
-        // Load the configuration files
-        // $cfg = $this->di->get("configuration");
-        // $config = $cfg->load("apikey.php");
-        // $config = $config["config"] ?? null;
-
-        // Create and configure new ip-object
-        // $this->weatherObj = new \Mahw17\Weather\Weather($config);
     }
+    
 
     /**
      * Test the method weatherForecast.

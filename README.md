@@ -30,6 +30,10 @@ Copy the needed configuration and setup the weather as a route handler for the r
 rsync -av vendor/mahw17/weather/config ./
 ```
 
+You need to create your own config file for apikeys to [ipstack](https://ipstack.com/signup/free) and [darksky](https://darksky.net/dev/register).
+
+After you retrieved your own set of api keys make a copy and rename config/apikey_sample.php to config/apikey.php and replace the sample keys.
+
 The weather module is now active on the route `weather/` according to the documentation. You may try it out on the route `weather` to get the weather forecast for any valid ip-address or coordinates.
 
 Optionally you may copy the API documentation.

@@ -27,9 +27,7 @@ class WeatherController implements ContainerInjectableInterface
         $page = $this->di->get("page");
         $session = $this->di->get("session");
 
-
         $ipObj = $this->di->get("weather")->ipObj;
-        // $ipObj = new \Mahw17\Weather\Ip();
 
         // Set navbar active
         $session->set('navbar', 'weather');
@@ -62,7 +60,6 @@ class WeatherController implements ContainerInjectableInterface
         $request = $this->di->get("request");
         $response = $this->di->get("response");
         $session = $this->di->get("session");
-        // $ipValidation = $this->di->get("ip");
         $weather = $this->di->get("weather");
 
         //

@@ -10,24 +10,15 @@ use PHPUnit\Framework\TestCase;
  */
 class IpTest extends TestCase
 {
-    // Create the di container.
-    protected $di;
-    protected $ipObj;
-
 
     /**
-     * Prepare before each test.
+     * Setup before each testcase
      */
-    protected function setUp()
+    public function setUp()
     {
-        global $di;
-
-        // Setup di
         $this->di = new DIFactoryConfig();
         $this->di->loadServices(ANAX_INSTALL_PATH . "/config/di");
-
-        // View helpers uses the global $di so it needs its value
-        $di = $this->di;
+        $this->di->loadServices(ANAX_INSTALL_PATH . "/test/config/di");
 
         // Load the configuration files
         $cfg = $this->di->get("configuration");
@@ -35,7 +26,7 @@ class IpTest extends TestCase
         $config = $config["config"] ?? null;
 
         // Create and configure new ip-object
-        $this->ipObj = new \Mahw17\IP\Ip($config);
+        $this->ipObj = new \Mahw17\Weather\Ip($config);
     }
 
     /**
