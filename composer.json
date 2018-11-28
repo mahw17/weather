@@ -1,0 +1,33 @@
+{
+    "name": "mahw17/weather",
+    "type": "library",
+    "description": "Anax weather module.",
+    "keywords": ["boilerplate", "framework", "mvc", "micro", "education"],
+    "homepage": "https://github.com/mahw17/weather",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marcus Holmersson",
+            "email": "mahw17@student.bth.se",
+            "homepage": "http://www.student.bth.se/~mahw17/dbwebb-kurser/ramverk1/me/redovisa/htdocs/",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/mahw17/weather/issues"
+    },
+    "autoload": {
+        "psr-4": {
+            "Anax\\": "src/",
+            "Mahw17\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=7.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7"
+    }
+}
