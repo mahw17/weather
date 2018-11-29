@@ -1,0 +1,10 @@
+/*!
+ * An  stylesheet for mapdiv.
+ *
+ */
+
+ #mapdiv {
+ 	margin-top: 1rem !important;
+ 	width: 350px;
+ 	height: 250px;
+ }

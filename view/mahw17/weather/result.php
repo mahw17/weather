@@ -7,6 +7,8 @@ namespace Anax\View;
  */
 
 ?>
+<!-- render stylesheet. Can/should be moved to config.page -->
+<link rel="stylesheet" type="text/css" href="<?= asset("mahw17/css/map.css") ?>">
 
 <div class="container">
 
@@ -65,3 +67,7 @@ namespace Anax\View;
         </div>
     </div>
 </div>
+
+<!-- render javascripts Can/should be moved to config.page, but then observe that the layout template isn't set to async!! (default template is view/anax/v2/layout/dbwebb_se) -->
+<script src="<?= asset("https://cdnjs.cloudflare.com/ajax/libs/openlayers/2.11/lib/OpenLayers.js") ?>"></script>
+<script src="<?= asset("mahw17/js/map.js") ?>"></script>
