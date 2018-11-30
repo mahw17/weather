@@ -5,6 +5,7 @@ Table of content
 ------------------------------------
 
 * [Install as Anax module](#Install-as-Anax-module)
+* [Install using scaffold postprocessing file](#Install-using-scaffold-postprocessing-file)
 * [Install and setup Anax](#Install-and-setup-Anax)
 * [Dependency](#Dependency)
 * [License](#License)
@@ -60,6 +61,16 @@ rsync -av vendor/mahw17/weather/content ./
 The API documentation is now available through the route `weather-api`.
 
 
+Install using scaffold postprocessing file
+------------------------------------
+
+The module supports a postprocessing installation script, to be used with Anax scaffolding. The script executes the default installation, as outlined above.
+
+```text
+bash vendor/mahw17/weather/.mahw17/scaffold/postprocess/weather.bash
+```
+
+The postprocessing script should be run after the `composer require` is done.
 
 
 Install and setup Anax

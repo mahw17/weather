@@ -79,7 +79,7 @@ class WeatherController implements ContainerInjectableInterface
         if (!$coord) {
             // Error message!
             $response->redirect("error/weather");
-            return false;
+            // return false;
         }
 
         // Type of data (forecast/history)

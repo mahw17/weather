@@ -32,6 +32,9 @@
         "phpunit/phpunit": "^7",
         "anax/anax-lite": "^1.0.24",
         "anax/page": "^2.0.0@beta",
-        "anax/view": "^2.0.0@beta"
+        "anax/view": "^2.0.0@beta",
+        "anax/content": "^2.0.0@beta",
+        "anax/cache": "^2.0.0@beta",
+        "anax/textfilter": "^1"
     }
 }

@@ -22,7 +22,7 @@ class WeatherTest extends TestCase
 
         $this->weatherObj = $this->di->get("weather");
     }
-    
+
 
     /**
      * Test the method weatherForecast.
@@ -36,11 +36,11 @@ class WeatherTest extends TestCase
     /**
      * Test the method weatherHistory.
      */
-    public function testweatherHistory()
-    {
-        $res = $this->weatherObj->weatherHistory();
-        $this->assertEquals(57, $res[0]->latitude);
-    }
+    // public function testweatherHistory()
+    // {
+    //     $res = $this->weatherObj->weatherHistory();
+    //     $this->assertEquals(57, $res[0]->latitude);
+    // }
 
     /**
      * Test the method testValidateIpNok
