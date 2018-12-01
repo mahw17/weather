@@ -98,4 +98,27 @@ class WeatherControllerTest extends TestCase
         $res = $this->controller->indexActionPost();
         $this->assertInternalType("object", $res);
     }
+
+    /**
+     * Test the forecast api".
+     */
+    public function testForecastActionGet()
+    {
+        $res = $this->controller->forecastActionGet();
+
+        $json = $res[0];
+        $this->assertEquals($json["data"]->longitude, 18.056);
+    }
+
+    /**
+     * Test the history api.
+     */
+    public function testHistoryActionGet()
+    {
+        $res = $this->controller->historyActionGet();
+
+        $json = $res[0];
+        $this->assertEquals($json["data"][0]->longitude, 18.056);
+    }
+
 }
