@@ -43,7 +43,7 @@ class WeatherTest extends TestCase
     }
 
     /**
-     * Test the method testValidateIpNok
+     * Test the method testValidateCoordinates
      */
     public function testValidateCoord()
     {

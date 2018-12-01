@@ -10,9 +10,6 @@ Table of content
 * [Dependency](#Dependency)
 * [License](#License)
 
-You can also read this [documentation online](https://canax.github.io/remserver/).
-
-
 
 Install as Anax module
 ------------------------------------
@@ -50,16 +47,16 @@ Both the javascripts and the stylesheet is set within the view (view/mahw17/weat
 But OBSERVE! the default layout template (viem/anax/v2/layout/dbwebb_se) is set to do the javascript async and this will not work,
 so if you're using the default template and want to move the init of javascript to the page config file, async must be removed from layout template.
 
-The weather module is now active on the route `weather/` according to the documentation. You may try it out on the route `weather` to get the weather forecast for any valid ip-address or coordinates.
 
-Optionally you may copy the API documentation.
+Copy the API documentation.
 
 ```
 rsync -av vendor/mahw17/weather/content ./
 ```
 
-The API documentation is now available through the route `weather-api`.
+The API documentation is now available through the route `api/weather`.
 
+The weather module is now active on the route `weather/` according to the documentation. You may try it out on the route `weather` to get the weather forecast for any valid ip-address or coordinates.
 
 Install using scaffold postprocessing file
 ------------------------------------
@@ -81,11 +78,11 @@ You need a Anax installation, before you can use this module. You can create a s
 Scaffold a sample Anax installation `anax-site-develop` into the directory `weather`.
 
 ```
-$ anax create weather anax-site-develop
-$ cd weather
+$ anax create anax anax-site-develop
+$ cd anax
 ```
 
-Point your webserver to `weather/htdocs` and Anax should display a Home-page.
+Point your webserver to `anax/htdocs` and Anax should display a Home-page.
 
 
 
