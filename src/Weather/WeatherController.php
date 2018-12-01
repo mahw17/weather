@@ -78,7 +78,7 @@ class WeatherController implements ContainerInjectableInterface
         // If neither coords by post or thru the ip is valid
         if (!$coord) {
             // Error message!
-            $response->redirect("error/weather");
+            return $response->redirect("error/weather");
             // return false;
         }
 

@@ -36,11 +36,11 @@ class WeatherTest extends TestCase
     /**
      * Test the method weatherHistory.
      */
-    // public function testweatherHistory()
-    // {
-    //     $res = $this->weatherObj->weatherHistory();
-    //     $this->assertEquals(57, $res[0]->latitude);
-    // }
+    public function testweatherHistory()
+    {
+        $res = $this->weatherObj->weatherHistory();
+        $this->assertEquals(57, $res[0]->latitude);
+    }
 
     /**
      * Test the method testValidateIpNok
