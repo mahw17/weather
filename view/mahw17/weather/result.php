@@ -61,7 +61,7 @@ namespace Anax\View;
         </div>
 
         <div class="span5">
-            <a onclick="ipMap.initMap(<?= $weatherType === "forecast" ? $weatherInfo->latitude : $weatherInfo[0]->latitude ?>, <?= $weatherType === "forecast" ? $weatherInfo->longitude : $weatherInfo[0]->longitude ?>)" class="btn btn-primary">Kartvy</a>
+            <a onclick="ipMap.initMap(<?= $weatherType === "forecast" ? $weatherInfo->latitude : $weatherInfo[0]->latitude ?>, <?= $weatherType === "forecast" ? $weatherInfo->longitude : $weatherInfo[0]->longitude ?>); this.onclick=null;" class="btn btn-primary">Kartvy</a>
             <a href="<?= url("weather") ?>" class="btn btn-primary">Tillbaka</a>
             <div id="mapdiv"></div>
         </div>
