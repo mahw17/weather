@@ -120,5 +120,4 @@ class WeatherControllerTest extends TestCase
         $json = $res[0];
         $this->assertEquals($json["data"][0]->longitude, 18.056);
     }
-
 }
