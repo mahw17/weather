@@ -135,7 +135,6 @@ class WeatherController implements ContainerInjectableInterface
             $ipValidation = $weather->ipObj;
             $results = $ipValidation->validateIp($param1);
 
-            $info = null;
             if ($results['valid']) {
                 $info = $ipValidation->ipInfo($param1);
                 $param1 = $info->latitude;
@@ -178,7 +177,6 @@ class WeatherController implements ContainerInjectableInterface
             $ipValidation = $weather->ipObj;
             $results = $ipValidation->validateIp($param1);
 
-            $info = null;
             if ($results['valid']) {
                 $info = $ipValidation->ipInfo($param1);
                 $param1 = $info->latitude;

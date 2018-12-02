@@ -77,7 +77,7 @@ class Weather
     /**
      * Fetch weather forecast
      *
-     * @param int @day Current day in unix timestamp
+     * @param int $day Current day in unix timestamp
      * @param array $coordinates geo coordinates
      *
      * @return array
@@ -108,7 +108,7 @@ class Weather
     /**
      * Validate coordinates
      *
-     * @param string coordinates
+     * @param string $coordinates
      *
      * @return array|boolean with coordinates, false if not valid
      */
