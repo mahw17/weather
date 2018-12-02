@@ -1,6 +1,7 @@
 Weather
 ==================================
 [![Latest Stable Version](https://poser.pugx.org/mahw17/weather/v/stable)](https://packagist.org/packages/mahw17/weather)
+[![Build Status](https://travis-ci.org/mahw17/weather.svg?branch=master)](https://travis-ci.org/mahw17/weather)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/mahw17/weather/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/mahw17/weather/?branch=master)
 [![Code Coverage](https://scrutinizer-ci.com/g/mahw17/weather/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/mahw17/weather/?branch=master)
 [![Build Status](https://scrutinizer-ci.com/g/mahw17/weather/badges/build.png?b=master)](https://scrutinizer-ci.com/g/mahw17/weather/build-status/master)

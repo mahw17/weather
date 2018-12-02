@@ -110,7 +110,7 @@ class Weather
      *
      * @param string $coordinates
      *
-     * @return array|boolean with coordinates, false if not valid
+     * @return array|boolean|string with coordinates, false if not valid
      */
     public function validateCoord($coordinates)
     {
