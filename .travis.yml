@@ -14,6 +14,14 @@ before_script:
 - make install check
 script:
 - make test
+# Test to send coverage information to scrutinizer
+- phpunit --coverage-text --coverage-clover=coverage.clover
 before_install:
 - openssl aes-256-cbc -K $encrypted_118d41f78e2f_key -iv $encrypted_118d41f78e2f_iv
   -in apikey.php.enc -out config/apikey.php -d
+script:
+
+# Send coverage information to scrutinizer
+after_script:
+  - wget https://scrutinizer-ci.com/ocular.phar
+  - php ocular.phar code-coverage:upload --format=php-clover coverage.clover
