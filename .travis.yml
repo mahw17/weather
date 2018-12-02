@@ -18,8 +18,8 @@ language: php
 
 php:
     - "7.2"
-    - "7.3"
-    - hhvm
+    # - "7.3"
+    # - hhvm
     - nightly
 
 sudo: false
@@ -30,7 +30,7 @@ git:
 matrix:
     allow_failures:
         - php: nightly
-        - php: hhvm
+        # - php: hhvm
 
 # addons:
 #     sonarcloud:
