@@ -7,7 +7,7 @@ return [
     "services" => [
         "weather" => [
             "shared" => true,
-            "callback" => function () {
+            "callback" => function() {
 
                 // Load the configuration files
                 $cfg = $this->get("configuration");

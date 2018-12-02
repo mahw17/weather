@@ -60,7 +60,7 @@ class Weather
     public function weatherForecast($coordinates = ["lat" => 57, "lon" => 18])
     {
         // Default value on return attributes
-        $url    = $this->apiUrl . $this->apiKey . '/' . $coordinates["lat"] . "," . $coordinates["lon"] . $this->apiExtension;
+        $url = $this->apiUrl . $this->apiKey . '/' . $coordinates["lat"] . "," . $coordinates["lon"] . $this->apiExtension;
 
 
         // Initiate new curl object
@@ -86,7 +86,7 @@ class Weather
     {
         // Create $urlArray
         $urlArray = array();
-        for ($i=0; $i < 30; $i++) {
+        for ($i = 0; $i < 30; $i++) {
             // Day to collect weather data for
             $day = $day - 24 * 60 * 60;
 
@@ -124,11 +124,11 @@ class Weather
                 "lat" => $coord[0],
                 "lon" => $coord[1]
             ];
-            $coordValid =  $coordinates["lat"] >= -90 &&
-                            $coordinates["lat"] <= 90 &&
-                            $coordinates["lon"] >= -180 &&
-                            $coordinates["lon"] <= 180
-                            ? true : false;
+            $coordValid = $coordinates["lat"] >= -90 &&
+                          $coordinates["lat"] <= 90 &&
+                          $coordinates["lon"] >= -180 &&
+                          $coordinates["lon"] <= 180
+                          ? true : false;
         }
 
         return $coordValid ? $coordinates : false;

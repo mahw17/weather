@@ -39,9 +39,9 @@ class Ip
     public function validateIp($ipAddress)
     {
         // Default value on return attributes
-        $valid      = false;
-        $ipType    = false;
-        $hostname   = false;
+        $valid = false;
+        $ipType = false;
+        $hostname = false;
 
         // Check if IP is valid either as a IPV4 or an IPV6
         if (filter_var($ipAddress, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4)) {
@@ -109,7 +109,7 @@ class Ip
     public function ipInfo($ipAddress)
     {
         // Default value on return attributes
-        $url    = $this->apiUrl . $ipAddress . '?access_key=' . $this->apiKey;
+        $url = $this->apiUrl . $ipAddress . '?access_key=' . $this->apiKey;
 
         // Initiate new curl object
         $curl = new \Mahw17\Weather\Curl();
