@@ -53,9 +53,9 @@ class Weather
     /**
      * Fetch weather forecast
      *
-     * @param array coordinates
+     * @param array $ccoordinates contains geolocation lat and long
      *
-     * @return array
+     * @return string
      */
     public function weatherForecast($coordinates = ["lat" => 57, "lon" => 18])
     {
@@ -67,8 +67,8 @@ class Weather
         $curl = new \Mahw17\Weather\Curl();
 
         // Get response
-        $result = $curl->fetchSingleUrl($url);
-        $result = json_decode($result);
+        $content = $curl->fetchSingleUrl($url);
+        $result = json_decode($content);
 
         // Collect and return results
         return $result;
@@ -109,7 +109,7 @@ class Weather
      *
      * @param string coordinates
      *
-     * @return array with coordinates, false if not valid
+     * @return array|boolean with coordinates, false if not valid
      */
     public function validateCoord($coordinates)
     {
