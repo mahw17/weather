@@ -16,7 +16,7 @@ git:
     submodules: false
 
 before_install:
-    - openssl aes-256-cbc -K $encrypted_f54541b161c5_key -iv $encrypted_f54541b161c5_iv -in apikey.php.enc -out apikey.php -d
+    openssl aes-256-cbc -K $encrypted_118d41f78e2f_key -iv $encrypted_118d41f78e2f_iv -in apikey.php.enc -out config/apikey.php -d
 
 before_script:
     - make install check
