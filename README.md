@@ -1,5 +1,6 @@
 Weather
 ==================================
+[![Latest Stable Version](https://poser.pugx.org/mahw17/weather/v/stable)](https://packagist.org/packages/mahw17/weather)
 
 Table of content
 ------------------------------------
