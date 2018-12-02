@@ -1,18 +1,47 @@
+# language: php
+# php:
+# - '7.2'
+# - hhvm
+# - nightly
+# matrix:
+#   allow_failures:
+#   - php: nightly
+#   - php: hhvm
+# sudo: false
+# git:
+#   submodules: false
+# before_script:
+# - make install check
+# script:
+# - make test
 language: php
+
 php:
-- '7.2'
-- hhvm
-- nightly
-matrix:
-  allow_failures:
-  - php: nightly
-  - php: hhvm
+    - "7.2"
+    - "7.3"
+    - hhvm
+    - nightly
+
 sudo: false
+
 git:
-  submodules: false
+    submodules: false
+
+matrix:
+    allow_failures:
+        - php: nightly
+        - php: hhvm
+
+# addons:
+#     sonarcloud:
+#         organization: "canax"
+
 before_script:
-- make install check
+    - make install
+
 script:
-- make test
+    - make check
+    - make test
+#- sonar-scanner
 before_install:
 - openssl aes-256-cbc -K $encrypted_118d41f78e2f_key -iv $encrypted_118d41f78e2f_iv -in apikey.php.enc -out config/apikey.php -d

@@ -111,8 +111,7 @@ clean-all: clean clean-cache
 
 # target: check                   - Check version of installed tools.
 .PHONY:  check
-check: check-tools-php check-docker
-# check: check-tools-bash check-tools-php check-docker
+check: check-tools-bash check-tools-php check-docker
 	@$(call HELPTEXT,$@)
 
 
