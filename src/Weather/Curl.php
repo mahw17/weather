@@ -18,7 +18,7 @@ class Curl //implements ContainerInjectableInterface
      *
      * @param string $url that should be curled.
      *
-     * @return array as the response.
+     * @return string as the response.
      */
     public function fetchSingleUrl($url)
     {
