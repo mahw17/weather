@@ -53,7 +53,7 @@ class WeatherController implements ContainerInjectableInterface
      * Retrive posted form.
      *
      */
-    public function indexActionPost()
+    public function indexActionPost($test = false)
     {
         // Load framework services
         $page = $this->di->get("page");
@@ -110,7 +110,7 @@ class WeatherController implements ContainerInjectableInterface
         $page->add("mahw17/intro/subintro", $data, "subintro");
         $page->add("mahw17/weather/result", $data, "main");
 
-        return $page->render($data);
+        return $test ? $data : $page->render($data);
     }
 
     /**

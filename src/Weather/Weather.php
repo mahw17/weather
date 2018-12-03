@@ -86,7 +86,7 @@ class Weather
     {
         // Create $urlArray
         $urlArray = array();
-        for ($i = 0; $i < 3; $i++) {
+        for ($i = 0; $i < 30; $i++) {
             // Day to collect weather data for
             $day = $day - 24 * 60 * 60;
 
