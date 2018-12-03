@@ -1,21 +1,15 @@
 language: php
 php:
 - '7.2'
-- hhvm
+# - hhvm
 - nightly
 matrix:
   allow_failures:
   - php: nightly
-  - php: hhvm
+  # - php: hhvm
 sudo: false
 git:
   submodules: false
 before_script:
 - make install check
-script: 
-before_install:
-- openssl aes-256-cbc -K $encrypted_118d41f78e2f_key -iv $encrypted_118d41f78e2f_iv
-  -in apikey.php.enc -out config/apikey.php -d
-after_script:
-- wget https://scrutinizer-ci.com/ocular.phar
-- php ocular.phar code-coverage:upload --format=php-clover coverage.clover
+script:

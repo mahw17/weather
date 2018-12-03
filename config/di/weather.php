@@ -7,11 +7,11 @@ return [
     "services" => [
         "weather" => [
             "shared" => true,
-            "callback" => function() {
+            "callback" => function () {
 
                 // Load the configuration files
                 $cfg = $this->get("configuration");
-                $config = $cfg->load("apikey.php");
+                $config = $cfg->load("apikey_sample.php");
                 $config = $config["config"] ?? null;
 
                 // Create and configure new weather-object
