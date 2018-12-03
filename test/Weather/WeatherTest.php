@@ -6,7 +6,7 @@ use Anax\DI\DIFactoryConfig;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Test for modelclass Weather.
+ * Test for class Weather.
  */
 class WeatherTest extends TestCase
 {

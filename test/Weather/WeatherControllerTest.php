@@ -46,7 +46,7 @@ class WeatherControllerTest extends TestCase
     }
 
     /**
-     * Test the route "index - post".
+     * Test the route "index - post, history".
      */
     public function testIndexActionPost()
     {
@@ -65,7 +65,7 @@ class WeatherControllerTest extends TestCase
     }
 
     /**
-     * Test the route "index - post".
+     * Test the route "index - post, forecast".
      */
     public function testIndexActionPostForecast()
     {
@@ -84,7 +84,7 @@ class WeatherControllerTest extends TestCase
     }
 
     /**
-     * Test the route "index - post".
+     * Test the route "index - post, forecast not okay".
      */
     public function testIndexActionPostNok()
     {

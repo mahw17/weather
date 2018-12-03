@@ -6,7 +6,7 @@ use Anax\DI\DIFactoryConfig;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Test the User class.
+ * Test the IP class.
  */
 class IpTest extends TestCase
 {
@@ -57,15 +57,6 @@ class IpTest extends TestCase
     }
 
     /**
-     * Test the method validateCoordOK.
-     */
-    // public function testValidateCoordOk()
-    // {
-    //     $res = $this->ipObj->validateCoord('2001:6b0:1::200');
-    //     $this->assertEquals(59.3333, $res['lat']);
-    // }
-
-    /**
      * Test the method validateCoord nOK.
      */
     public function testValidateCoordNok1()
@@ -75,7 +66,7 @@ class IpTest extends TestCase
     }
 
     /**
-     * Test the method validateCoord nOK.
+     * Test the method validateCoord nOK2.
      */
     public function testValidateCoordNok2()
     {

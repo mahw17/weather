@@ -2,6 +2,7 @@
 /**
  * Storage for API keys.
  *
+ * If you change file name you must update config/weather with the new file name.
  */
 
 return [

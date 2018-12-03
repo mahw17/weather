@@ -24,7 +24,7 @@ class Weather
     private $apiExtension = null;
 
     /**
-     * API EXTENSION.
+     * IP object
      */
     public $ipObj = null;
 
@@ -53,7 +53,7 @@ class Weather
     /**
      * Fetch weather forecast
      *
-     * @param array $ccoordinates contains geolocation lat and long
+     * @param array $coordinates contains geolocation latitude and longitude
      *
      * @return string
      */
@@ -61,7 +61,6 @@ class Weather
     {
         // Default value on return attributes
         $url = $this->apiUrl . $this->apiKey . '/' . $coordinates["lat"] . "," . $coordinates["lon"] . $this->apiExtension;
-
 
         // Initiate new curl object
         $curl = new \Mahw17\Weather\Curl();
@@ -77,7 +76,7 @@ class Weather
     /**
      * Fetch weather forecast
      *
-     * @param int $day Current day in unix timestamp
+     * @param int   $day Current day in unix timestamp
      * @param array $coordinates geo coordinates
      *
      * @return array
@@ -99,7 +98,6 @@ class Weather
 
         // Get response
         $result = $curl->fetchMultiUrl($urlArray);
-        // $result = json_decode($result);
 
         // Collect and return results
         return $result;

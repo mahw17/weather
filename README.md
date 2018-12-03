@@ -36,7 +36,7 @@ rsync -av vendor/mahw17/weather/config ./
 
 You need to create your own config file for apikeys to [ipstack](https://ipstack.com/signup/free) and [darksky](https://darksky.net/dev/register).
 
-After you retrieved your own set of api keys make a copy and rename config/apikey_sample.php to config/apikey.php and replace the sample keys.
+After you retrieved your own set of api keys create a new or update config/apikey_sample.php if you choose to change filename you must also update config/weather with that filename.
 
 Copy the needed views.
 

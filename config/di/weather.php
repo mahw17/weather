@@ -1,6 +1,6 @@
 <?php
 /**
- * Creating the session as a $di service.
+ * Creating the weather class as a $di service.
  */
 return [
     // Services to add to the container.
@@ -11,7 +11,7 @@ return [
 
                 // Load the configuration files
                 $cfg = $this->get("configuration");
-                $config = $cfg->load("apikey_sample.php");
+                $config = $cfg->load("apikey_sample.php"); // Update with your own apikey file
                 $config = $config["config"] ?? null;
 
                 // Create and configure new weather-object

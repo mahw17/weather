@@ -12,11 +12,8 @@ class WeatherController implements ContainerInjectableInterface
 {
     use ContainerInjectableTrait;
 
-
-    // Create and configure new db-object
-
     /**
-     * Display the about page.
+     * Index page with user form.
      *
      * @return object
      */
@@ -27,6 +24,7 @@ class WeatherController implements ContainerInjectableInterface
         $page = $this->di->get("page");
         $session = $this->di->get("session");
 
+        // Get IP-object from weather service
         $ipObj = $this->di->get("weather")->ipObj;
 
         // Set navbar active
@@ -50,7 +48,7 @@ class WeatherController implements ContainerInjectableInterface
     }
 
     /**
-     * Retrive posted form.
+     * Retrive posted form. Check input. Based on input render either forecast or weather history
      *
      */
     public function indexActionPost($test = false)
@@ -62,7 +60,7 @@ class WeatherController implements ContainerInjectableInterface
         $session = $this->di->get("session");
         $weather = $this->di->get("weather");
 
-        //
+        // Get Ip-object from weather service
         $ipValidation = $weather->ipObj;
 
         // Validate coord (from posted)
@@ -79,7 +77,6 @@ class WeatherController implements ContainerInjectableInterface
         if (!$coord) {
             // Error message!
             return $response->redirect("error/weather");
-            // return false;
         }
 
         // Type of data (forecast/history)
@@ -125,9 +122,6 @@ class WeatherController implements ContainerInjectableInterface
     {
         // Load framework services
         $weather = $this->di->get("weather");
-
-
-        // Collect data
 
         // Input as IP-address => convert to coordinates
         if (strtolower($source) === "ip") {

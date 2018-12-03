@@ -1,6 +1,6 @@
 <?php
 /**
- * Load the ip controller.
+ * Load the weather controller.
  */
 return [
     "routes" => [

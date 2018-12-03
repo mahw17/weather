@@ -2,16 +2,11 @@
 
 namespace Mahw17\Weather;
 
-// use Anax\Commons\ContainerInjectableInterface;
-// use Anax\Commons\ContainerInjectableTrait;
-
 /**
  * cUrl methods to fetch information
  */
-class Curl //implements ContainerInjectableInterface
+class Curl
 {
-    // use ContainerInjectableTrait;
-
     /**
      * Fetch information from single url
      *
@@ -77,11 +72,7 @@ class Curl //implements ContainerInjectableInterface
         }
         // close
         curl_multi_close($mhandle);
-        //
-        // foreach ($result as $res) {
-        //     $res = json_decode($res);
-        //     echo $res->latitude . "<br>";
-        // }
+
         return $result;
     }
 }

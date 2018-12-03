@@ -1,6 +1,12 @@
 Revision history
 =================================
 
+v1.0.3 (2018-12-03)
+---------------------------------
+
+* Added CI-services Travis and scrutinizer.
+* Test suite not disconnected from valid api-keys.
+
 v1.0.2 (2018-12-01)
 ---------------------------------
 
